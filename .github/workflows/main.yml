@@ -21,9 +21,3 @@ jobs:
       - name: Generate HTML
         run: |
           echo "<html><body><h1>Welcome to my website!</h1></body></html>" > index.html
-
-      - name: Commit and push changes
-        run: |
-          git add .
-          git commit -m "Generated index.html"
-          git push origin main
