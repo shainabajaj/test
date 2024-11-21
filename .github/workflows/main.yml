@@ -1,6 +1,23 @@
-- name: HTML Preview
-  id: html_preview
-  uses: pavi2410/html-preview-action@v4
-  with:
-    html_file: index.html
-    job_summary: true
+name: Generate Index HTML
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate HTML
+        run: |
+          echo "<html><body><h1>Welcome to my website!</h1></body></html>" > index.html
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Generated index.html"
+          git push origin main
