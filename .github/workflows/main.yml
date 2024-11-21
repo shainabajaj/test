@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      generate_html:
+        description: 'Generate index.html'
+        required: true
+        default: 'true'
 
 jobs:
   generate-html:
