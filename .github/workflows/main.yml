@@ -10,7 +10,9 @@ on:
         description: 'Generate index.html'
         required: true
         default: 'true'
-
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 jobs:
   generate-html:
     runs-on: ubuntu-latest
