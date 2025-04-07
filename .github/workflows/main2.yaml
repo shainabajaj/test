@@ -1,0 +1,10 @@
+name: newfile
+on: [push]
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run-cmd
+      run: |
+        pwd
+        ls -a
