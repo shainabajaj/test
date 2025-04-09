@@ -1,0 +1,12 @@
+name: STALE
+on: push
+jobs:
+  stale:
+    runs-on: ubuntu-24.04
+    steps:
+    
+    -  uses: actions/stale@v8
+       with:
+          stale-issue-message: old
+          days before stale: 1
+          days before close: 1
