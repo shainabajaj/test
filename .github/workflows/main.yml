@@ -1,31 +1,14 @@
-name: Generate Index HTML
-
+name: manual
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
-      generate_html:
-        description: 'Generate index.html'
+      string1:
+        type: string
         required: true
-        default: 'true'
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: false
+        default: shaina
 jobs:
-  generate-html:
-    runs-on: ubuntu-latest
+  firstjob:
+    runs-on: ubuntu_latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4.2.2
-
-      - name: Generate HTML
-        run: |
-          echo "<html><body><h1>Welcome to my website!</h1></body></html>" > index.html
-      - name: HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v4
-        with:
-          html_file: 'index.html'
-          job_summary: true
+      - run: |
+          echo "string value ${{inputs.string1}}"
