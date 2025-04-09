@@ -1,6 +1,6 @@
 name: dispatch receiver
 
-on: [repository_dispatch]
+on: [push]
 
 jobs:
   build:
