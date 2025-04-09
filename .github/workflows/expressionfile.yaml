@@ -13,3 +13,5 @@ jobs:
         echo ${{null}}
         echo ${{true}}
         echo ${{'a string'}}
+        echo ${{ true and false}}
+        echo ${{ true || {{ true and false}}}}
