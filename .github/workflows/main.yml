@@ -8,7 +8,7 @@ on:
         default: shaina
 jobs:
   firstjob:
-    runs-on: ubuntu_latest
+    # runs-on: ubuntu_latest
     steps:
       - run: |
           echo "string value ${{inputs.string1}}"
