@@ -1,7 +1,7 @@
 name: STALE
 on: 
   schedule:
-      - cron: "5 * * * *"
+      - cron: "1 * * * *"
 jobs:
   stale:
     runs-on: ubuntu-24.04
