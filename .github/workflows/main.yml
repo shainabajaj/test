@@ -5,10 +5,10 @@ on:
       string1:
         type: string
         required: true
-        default: shaina
+        default: shainaRVRF
 jobs:
   firstjob:
-    # runs-on: ubuntu_latest
+    runs-on: ubuntu-24.04
     steps:
       - run: |
           echo "string value ${{inputs.string1}}"
