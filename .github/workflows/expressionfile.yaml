@@ -14,4 +14,4 @@ jobs:
         echo ${{true}}
         echo ${{'a string'}}
         echo ${{ true && false}}
-        echo ${{ true || {{ true && false}} }}
+        # echo ${{ true || {{ true && false}} }}
