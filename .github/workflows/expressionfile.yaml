@@ -1,4 +1,4 @@
-name: manual
+name: manual_expression
 on:
   workflow_dispatch:
     inputs:
