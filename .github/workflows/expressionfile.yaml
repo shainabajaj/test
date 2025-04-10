@@ -1,18 +1,17 @@
-name: dispatch receiver
-
-on: [push]
-
+name: manual
+on:
+  workflow_dispatch:
+    inputs:
+      string1:
+        type: string
+        required: true
+        default: shaina
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  first_job:
+    runs_on: ubuntu_latest
+      
     steps:
-    - name: expressions
-      id: expressions
-      if: github.event_name == 'push' || github.event_name == 'pull_request'
-      run:
-        echo ${{1}}
-        echo ${{null}}
-        echo ${{true}}
-        echo ${{'a string'}}
-        echo ${{ true && false}}
-        echo ${{ true || (true && false) }}
+      - run: |
+          echo "string value ${{inputs.string1}}"
+      - run: echo "hi"
+        if: ${{inputs.string1 == 'shaina' }} || failure()
