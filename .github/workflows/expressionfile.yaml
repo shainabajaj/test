@@ -8,6 +8,7 @@ jobs:
     steps:
     - name: expressions
       id: expressions
+      if: github.event_name == 'push' || github.event_name == 'pull_request'
       run:
         echo ${{1}}
         echo ${{null}}
