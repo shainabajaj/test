@@ -8,7 +8,7 @@ on:
         default: shaina
 jobs:
   first_job:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-24.04
       
     steps:
       - run: |
