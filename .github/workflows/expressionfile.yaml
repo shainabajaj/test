@@ -12,6 +12,6 @@ jobs:
       
     steps:
       - run: |
-          echo "string value ${{inputs.string1}}"
-      - run: echo "hi"
-        if: ${{inputs.string1 == 'shaina' }} || failure()
+          echo $GITHUB_REF
+      - run: echo '${{ github.ref }}'
+        # if: ${{inputs.string1 == 'shaina' }} || failure()
