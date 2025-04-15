@@ -1,0 +1,15 @@
+
+name: check env variables
+on: [push]
+env:
+  yaml_var: this is yaml var
+jobs:
+  first_job: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: check env variables values
+        run: |
+            echo $GITHUB_REF
+            echo '${{ github.ref }}'
+
+    
