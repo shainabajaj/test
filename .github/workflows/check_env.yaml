@@ -2,7 +2,7 @@
 name: check env variables
 on: [push]
 env:
-  yaml_var: {{ this is yaml var in brackets }}
+  yaml_var: ${{ this is yaml var in brackets }}
 jobs:
   first_job: 
     runs-on: ubuntu-latest
