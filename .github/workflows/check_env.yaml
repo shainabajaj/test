@@ -2,7 +2,7 @@
 name: check env variables
 on: [push]
 env:
-  yaml_var: this is yaml var
+  yaml_var: {{ this is yaml var in brackets }}
 jobs:
   first_job: 
     runs-on: ubuntu-latest
@@ -10,6 +10,9 @@ jobs:
       - name: check env variables values
         run: |
             echo $GITHUB_REF
+            echo $yaml_var
+      - name: 2nd
+        run: |
             echo '${{ github.ref }}'
             echo $yaml_var
 
