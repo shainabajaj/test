@@ -25,5 +25,6 @@ jobs:
         run: |
             echo $VNEW_ENV_AR
             echo $yaml_var
-            echo $TEST_PROD_VARIABLE
+            echo ${{ vars.TEST_PROD_VARIABLE }}
+            echo "secret ${{ secret.ENV_SECRET }}
     
