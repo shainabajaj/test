@@ -17,8 +17,8 @@ jobs:
             echo $yaml_var
       - name: from dynamic file
         run: |
-          echo"VNEW_ENV_AR=$(date)" >> "$GITHUB_ENV"
-          echo"yaml_var=$RANDOM" >> "$GITHUB_ENV"
+          echo "VNEW_ENV_AR=$(date)" >> "$GITHUB_ENV"
+          echo "yaml_var=$RANDOM" >> "$GITHUB_ENV"
           echo "::debug::Set the Octocat variable"
           echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
       - name: from dynamic file
