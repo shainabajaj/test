@@ -25,4 +25,5 @@ jobs:
         run: |
             echo $VNEW_ENV_AR
             echo $yaml_var
+            echo $TEST_PROD_VARIABLE
     
